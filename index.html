@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Font Awesome CDN for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+   
+
+        /* Text animation */
+        .animated-text {
+            opacity: 0;
+            animation: fadeBounce 1.2s forwards;
+        }
+        .animated-text:nth-child(1) { animation-delay: 0.1s; }
+        .animated-text:nth-child(2) { animation-delay: 0.3s; }
+        .animated-text:nth-child(3) { animation-delay: 0.5s; }
+        .animated-text:nth-child(4) { animation-delay: 0.7s; }
+        .animated-text:nth-child(5) { animation-delay: 0.9s; }
+        @keyframes fadeBounce {
+            0% { opacity: 0; transform: translateY(30px); }
+            60% { opacity: 1; transform: translateY(-10px); }
+            80% { transform: translateY(5px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInLeft {
+            0% { opacity: 0; transform: translateX(-40px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+        @media (width: 350px) {
+            .sidebar {
+                width: 60px;
+                padding-top: 1rem;
+            }
+            .sidebar a {
+                font-size: 0.9rem;
+                margin: 0.7rem 0;
+            }
+            .main-content {
+                margin-left: 70px;
+            }
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f8;
+            color: #222;
+        }
+        header {
+            background: #2d3e50;
+            color: #fff;
+            padding: 2rem 0 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header {
+            background: #2d3e50;
+            color: #fff;
+            padding: 2rem 0 1rem 0;
+            text-align: center;
+            position: relative;
+        }
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            margin-bottom: 1rem;
+            background: #e3eaf2;
+        }
+        main {
+            width: 350px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        section {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            padding: 2rem;
+        }
+        h2 {
+            color: #2d3e50;
+            margin-top: 0;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .skill {
+            background: #e3eaf2;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .project {
+            background: #f9fafb;
+            border: 1px solid #e3eaf2;
+            border-radius: 6px;
+            padding: 1rem;
+        }
+        .contact {
+            text-align: center;
+        }
+        .contact-icons {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 1.5rem 0 0.5rem 0;
+            width: 350px;
+            background: transparent;
+        }
+        .sidebar .contact-icons {
+            position: absolute;
+            bottom: 2rem;
+            left: 0;
+            width: 350px;
+            justify-content: center;
+        }
+        .contact-icons a {
+            color: #b0c4de;
+            font-size: 2.2rem;
+            transition: color 0.2s, transform 0.2s;
+            animation: float 2.5s infinite ease-in-out;
+            display: inline-block;
+            margin: 0 0.3rem;
+        }
+        .contact-icons a:nth-child(2) { animation-delay: 0.3s; }
+        .contact-icons a:nth-child(3) { animation-delay: 0.6s; }
+        .contact-icons a:nth-child(4) { animation-delay: 0.9s; }
+        .contact-icons a:nth-child(5) { animation-delay: 1.2s; }
+        .contact-icons a:nth-child(6) { animation-delay: 1.5s; }
+        .contact-icons a:nth-child(7) { animation-delay: 1.8s; }
+        .contact-icons a:nth-child(8) { animation-delay: 2.1s; }
+        .contact-icons a:hover {
+            color: #fff;
+            transform: scale(1.25) rotate(-8deg);
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            25% { transform: translateY(-10px); }
+            50% { transform: translateY(0); }
+            75% { transform: translateY(10px); }
+            100% { transform: translateY(0); }
+        }
+        footer {
+            background: #2d3e50;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 0.9rem;
+        }
+        @media (width: 350px) {
+            main {
+                padding: 0;
+            }
+            section {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <header>
+            <img src="https://i.postimg.cc/SNXR3KpF/20250728-105549.jpg" alt="Profile Picture" class="profile-pic animated-text">
+            <h1 class="animated-text" style="font-size: 20px;">Oreoluwa Seyifunmi Kolawole</h1>
+            <p class="animated-text" style="font-size: 20px;">Web Developer & Designer Frontend/Backend</p>
+        </header>
+        <section id="about">
+            <h2 class="animated-text" style="font-family: sans-serif; font-weight: boldest; text-align: center;">Whether you need a professional media website, an e-commerce store, a portfolio, or even a custom system like a booking or VTU platform, i can handle the full process - from design to deployment. We can Handle: Remote, Hybrid, On-site</h2>
+            <p class="animated-text" style="font-size: 18px; font-family: Helvetica; font-weight: light; text-align: center;">i'm someone with a unique blend of creativity and logic, shaped by my background in coding and my passion for music. On one side, i enjoy the precision and problem-solving that comes with programming-building solutions, exploring new technologies, and turning ideas into working projects. On the other side, music fuels my creativity and self-expression, giving me a way to connect emotonally and think outside the box. Together, these two worlds make me who i am: a person who thrives at the intersection of technical skill and artistic expression </p>
+        </section>
+        </section>
+        <section id="skills">
+                <h2 class="animated-text">Skills</h2>
+                <div class="skills">
+                    <span class="skill animated-text"><i class="fab fa-html5"></i> HTML</span>
+                    <span class="skill animated-text"><i class="fab fa-css3-alt"></i> CSS</span>
+                    <span class="skill animated-text"><i class="fab fa-js"></i> JavaScript</span>
+                    <span class="skill animated-text"><i class="fab fa-react"></i> React</span>
+                    <span class="skill animated-text"><i class="fab fa-python"></i> Python</span>
+                    <span class="skill animated-text"><i class="fab fa-node-js"></i> Node.js</span>
+                    <!-- Add more skills as needed -->
+                    <span class="skill animated-text"><i class="fab fa-html5"></i> HTML5</span>
+                    <span class="skill animated-text"><i class="fab fa-css3-alt"></i> CSS3</span>
+                    <span class="skill animated-text"><i class="fab fa-js"></i> JavaScript (ES6+)</span>
+                    <span class="skill animated-text"><i class="fab fa-react"></i> React.js</span>
+                    <span class="skill animated-text">Responsive Web Design</span>
+                    <span class="skill animated-text">Backend Development</span>
+                    <span class="skill animated-text">RESTful API</span>
+                    <span class="skill animated-text">Database Management (SQL & NoSQL)</span>
+                    <span class="skill animated-text">Git & Version Control</span>
+                    <span class="skill animated-text">Debugging & Troubleshooting</span>
+                    <span class="skill animated-text">Problem Solving</span>
+                    <span class="skill animated-text">Communication</span>
+                    <span class="skill animated-text">Time Management</span>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>A fully responsive personal website designed to showcase my background, skills, and projects. it solves the problem of having a central place where people can learn about me and my work.  Technologies Used: HTML,CSS, JavaScript(with responsive design principle),.</p>
+                </div>
+                <div class="project">
+                    <h3>My Boosting Website</h3>
+                    <p>Also a fullyy responsive personal website i name this website The Social Panel. I built this website for customers who want to boost any kind of social media account tho ive not uploaded it yet because im still adding more new and modern features to my backend the skills i used in this project are: HTML,CSS,node.js,JavaScript, Flutterwave API.  soon i will post this website online..</p>
+                </div>
+                <div class="project">
+                    <h3>Music Visualizer Website</h3>
+                    <p>An interactive web app that transform audio into real-time visual effects, combining my love for coding and music.  It helps users experience music in a new, creative way. i used: JavaScript, web Audio API, p5.js.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact" style="background: #f9fafb; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); margin: 3rem auto; width: 340px; text-align: center;">
+            <h2 class="animated-text" style="color: #2d3e50; margin-bottom: 1.5rem;">Contact</h2>
+            <div class="contact animated-text" style="margin-bottom: 2rem;">
+                <a href="mailto:your.email@example.com" style="color:#2d3e50; font-size:2rem; vertical-align:middle; margin-right:0.5rem;" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="theonlysocialpanel@gmail.com" style="font-size: 1.2rem; color: #222; text-decoration: underline;">theonlysocialpanel@gmail.com</a>
+            </div>
+            <div class="contact-icons" style="justify-content: center; gap: 2rem; margin-top: 1.5rem;">
+                <a href="https://www.linkedin.com/in/oreoluwa-seyifunmi-896378373?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="contact-icons" style="justify-content: center; gap: 2rem; margin-top: 1.5rem;">
+                <a href="https://www.tiktok.com/@orecodez?_t=ZM-8zXMo5BlY5m&_r=1" title="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="contact-icons" style="justify-content: center; gap: 2rem; margin-top: 1.5rem;">
+                <a href="https://www.facebook.com/share/166Wxc2FeE/" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+            <div class="contact-icons" style="justify-content: center; gap: 2rem; margin-top: 1.5rem;">
+                <a href="https://x.com/ORECODEX?t=GHCbm160by2kqJ5aOMrlcA&s=09" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="contact-icons" style="justify-content: center; gap: 2rem; margin-top: 1.5rem;">
+                <a href="https://www.instagram.com/orecodevibe?utm_source=qr&igsh=czUyeHZ1ZTAydjl0" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="contact-icons" style="justify-content: center; gap: 2rem; margin-top: 1.5rem;">
+                <a href="https://github.com/orekolawole9-hue" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="contact-icons" style="justify-content: center; gap: 2rem; margin-top: 1.5rem;">
+                <a href="https://wa.me/message/RHSSTR6P5TY4L1" title="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 Your Name. All rights reserved.
+    </footer>
+</body>
+</html>
